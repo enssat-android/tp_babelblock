@@ -1,6 +1,7 @@
 package fr.enssat.babelblock.tools
 
 import android.content.Context
+import fr.enssat.babelblock.tools.impl.SpeechRecognizerHandler
 import fr.enssat.babelblock.tools.impl.TextToSpeechHandler
 import fr.enssat.babelblock.tools.impl.TranslatorHandler
 import java.util.Locale
@@ -16,6 +17,15 @@ interface TranslationTool {
     fun close()
 }
 
+interface SpeechToTextTool {
+    interface Listener {
+        fun onResult(text: String, isFinal: Boolean)
+    }
+    fun start(listener: Listener)
+    fun stop()
+    fun close()
+}
+
 class BlockService(val context: Context) {
 
     fun textToSpeech():TextToSpeechTool {
@@ -26,5 +36,7 @@ class BlockService(val context: Context) {
     fun translator(from: Locale, to: Locale): TranslationTool =
         TranslatorHandler(context.applicationContext, from, to)
 
+    fun speechToText(from: Locale = Locale.getDefault()): SpeechToTextTool =
+        SpeechRecognizerHandler(context.applicationContext, from)
 }
 
