@@ -3,4 +3,5 @@
     <string name="tts">Text To Speech</string>
     <string name="stt">Speech To Text</string>
     <string name="trs">Translate</string>
+    <string name="block">Block</string>
 </resources>

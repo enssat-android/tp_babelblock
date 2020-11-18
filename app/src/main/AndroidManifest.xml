@@ -24,26 +24,36 @@
             android:name=".TextToSpeechActivity"
             android:screenOrientation="userLandscape"
             android:label="@string/tts">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
 
         <activity
             android:name=".TranslatorActivity"
             android:screenOrientation="userLandscape"
             android:label="@string/trs">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
 
         <activity
             android:name=".SpeechToTextActivity"
             android:screenOrientation="userLandscape"
             android:label="@string/stt">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".BlockActivity"
+            android:screenOrientation="userLandscape"
+            android:label="@string/block">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
