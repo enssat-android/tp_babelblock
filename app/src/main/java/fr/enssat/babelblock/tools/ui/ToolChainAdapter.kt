@@ -37,6 +37,7 @@ class ToolChainAdapter(val toolChain: ToolChain) : RecyclerView.Adapter<ToolChai
 
     override fun onRowReleased(viewHolder: RecyclerView.ViewHolder) {
         viewHolder.itemView.setBackgroundColor(Color.TRANSPARENT)
+        notifyDataSetChanged()
     }
 
     //viewholder, kind of reusable view cache,  for each tool in the chain
